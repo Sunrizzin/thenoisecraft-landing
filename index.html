@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- SEO -->
+<meta name="description" content="The NoiseCraft is an offline noise generator to help you focus, relax or sleep — with no tracking and no accounts.">
+<meta name="keywords" content="noise generator, offline focus, sleep sounds, background sound app, minimal noise app">
+<meta name="author" content="The NoiseCraft Team">
+
+<!-- iOS Smart Banner -->
+<meta name="apple-itunes-app" content="app-id=6747891000">
   <title>The NoiseCraft</title>
   <style>
     body {
@@ -42,6 +49,61 @@
     .appstore-button img {
       height: 50px;
     }
+    .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 12px;
+}
+
+.feature-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #333;
+  padding: 0 12px;
+}
+.faq {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+.faq h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 24px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+}
   </style>
 </head>
 <body>
@@ -54,13 +116,53 @@
   <main>
     <img src="logo.png" alt="Logo" style="width: 64px; height: 64px; border-radius: 14px; margin-bottom: 20px;" />
     <h1>The <strong>NoiseCraft</strong></h1>
-    <h2>Soothing offline noise generator.</h2>
+    <h2>Simple offline noise generator.</h2>
     <div class="appstore-button">
       <a href="https://apps.apple.com/us/app/the-noise-craft/id6747891000">
         <img src="AppStoreButton.svg" alt="Download on the App Store">
       </a>
     </div>
   </main>
+
+<section class="features-grid">
+  <div class="feature-card">
+    <img src="2b2279c98e029fb592ea495444ac3f6f34c7effb1659fe80d2646418c1cb095c_resized.jpg" alt="NoiseCraft UI" />
+    <p>One-tap start. Gentle soundwaves help you focus, relax, or sleep.</p>
+  </div>
+  <div class="feature-card">
+    <img src="8DDA3559-EC6C-439D-9657-B6AA97BC67B0_1_105_c_resized.jpg" alt="Controls View" />
+    <p>Customize mood: adjust rhythm, BPM, volumes and accent color.</p>
+  </div>
+  <div class="feature-card">
+    <img src="497FAF9D-1AA6-4800-A2FC-B22A375EB7A6_1_105_c_resized.jpg" alt="Background Options" />
+    <p>Backgrounds like Rain, Fire, Space & more — available in Pro.</p>
+  </div>
+  <div class="feature-card">
+    <img src="17D8421D-6BCB-4338-81DC-5CA751D66F97_1_105_c_resized.jpg" alt="Accent Color Picker" />
+    <p>Choose your vibe. Every user gets their own comfortable visual.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>Is The NoiseCraft really offline?</h3>
+    <p>Yes. All sounds are generated locally — no internet needed at all.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it free?</h3>
+    <p>The core experience is free. A Pro version unlocks extra sound scenes.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do I need an account?</h3>
+    <p>No accounts, no data collection, no tracking. Ever.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can I contact support?</h3>
+    <p>Sure! Just email us at <a href="mailto:info@thenoisecraft.com">info@thenoisecraft.com</a>.</p>
+  </div>
+</section>
+
 <footer style="margin-top: 40px; padding: 20px 0; text-align: center; font-size: 14px; color: #888;">
     <p>© 2025 The NoiseCraft. All rights reserved.</p>
     <p>Contact us: <a href="mailto:info@thenoisecraft.com">info@thenoisecraft.com</a></p>
