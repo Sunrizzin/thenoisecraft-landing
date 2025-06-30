@@ -61,13 +61,19 @@
     }
 
     .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1000px;
-      margin: 80px auto;
-      padding: 0 16px;
-    }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
     .feature-card {
       background: #f9f9f9;
@@ -169,7 +175,7 @@
     </div>
   </section>
 
-  <section class="faq">
+  <!-- <section class="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>Is The NoiseCraft really offline?</h3>
@@ -187,7 +193,7 @@
       <h3>Can I contact support?</h3>
       <p>Sure! Just email us at <a href="mailto:info@thenoisecraft.com">info@thenoisecraft.com</a>.</p>
     </div>
-  </section>
+  </section> -->
 
   <footer>
     <p>© 2025 The NoiseCraft. All rights reserved.</p>
