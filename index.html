@@ -164,6 +164,26 @@
     .footer-content a:hover {
       color: #000;
     }
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.branding img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+}
+
+.branding h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
   </style>
 </head>
 <body>
@@ -174,8 +194,10 @@
   </nav>
 
   <main>
-    <img src="logo.png" alt="Logo" style="width: 64px; height: 64px; border-radius: 14px; margin-bottom: 20px;" />
-    <h1>The NoiseCraft</h1>
+    <div class="branding">
+  <img src="logo.png" alt="Logo" />
+  <h1>The NoiseCraft</h1>
+</div>
     <h2>Offline soundscapes to focus, relax, or sleep.</h2>
     <div class="appstore-button">
       <a href="https://apps.apple.com/us/app/the-noise-craft/id6747891000">
@@ -183,6 +205,27 @@
       </a>
     </div>
   </main>
+
+  <section style="padding: 60px 20px; background-color: #fefefe; border-top: 1px solid #eee;">
+  <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: #222;">What’s New 1.0.1</h2>
+
+  <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="margin-bottom: 16px;">
+        <strong>✨ Smarter Sessions:</strong> Your last setup - volumes, BPM, soundscape, and color - now saves automatically.
+      </li>
+      <li style="margin-bottom: 16px;">
+        <strong>🎨 Cleaner Interface:</strong> New animations and a refreshed UI for a smoother experience.
+      </li>
+      <li style="margin-bottom: 16px;">
+        <strong>⚙️ Extended BPM Range:</strong> More flexibility to match your energy - from calm to energetic.
+      </li>
+      <li style="margin-bottom: 16px;">
+        <strong>🐞 Bug Fixes:</strong> Squashed a few bugs and improved performance.
+      </li>
+    </ul>
+  </div>
+</section>
 
   <section class="features-grid">
     <div class="feature-card">
