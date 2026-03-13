@@ -3,66 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <title>Privacy Policy - The NoiseCraft</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-      color: #222;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#0b0f1a',
+            surface: '#131927',
+            border: '#1e2740',
+            accent: '#7c6ef0',
+          }
+        }
+      }
     }
-
-    nav {
-      position: sticky;
-      top: 0;
-      text-align: right;
-      padding: 20px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #888;
-      font-size: 0.9rem;
-    }
-
-    a {
-      color: #007aff;
-    }
-  </style>
+  </script>
 </head>
-<body>
+<body class="bg-base text-[#e8eaf0] font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif] antialiased">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="mailto:info@thenoisecraft.com">Support</a>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-base/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="logo.png" alt="The NoiseCraft" class="w-8 h-8 rounded-lg" />
+        <span class="font-semibold text-sm hidden sm:inline">The NoiseCraft</span>
+      </a>
+      <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#8b92a8]">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+        <a href="mailto:info@thenoisecraft.com" class="hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
   </nav>
 
-  <h1>Privacy Policy</h1>
-  <p><strong>Effective date:</strong> June 30, 2025</p>
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 pt-24 pb-16">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Privacy Policy</h1>
+    <p class="text-sm text-[#8b92a8] mb-8"><strong>Effective date:</strong> June 30, 2025</p>
 
-  <p>The NoiseCraft respects your privacy. This app does not collect, track, or share any personal information. All features work entirely offline.</p>
+    <p class="mb-6 text-[#c0c4d0] leading-relaxed">The NoiseCraft respects your privacy. This app does not collect, track, or share any personal information. All features work entirely offline.</p>
 
-  <h2>Data Collection</h2>
-  <p>The NoiseCraft does not collect any user data. We do not use analytics tools, advertising SDKs, or third-party tracking services.</p>
+    <h2 class="text-xl font-semibold mt-10 mb-3">Data Collection</h2>
+    <p class="text-[#8b92a8] leading-relaxed">The NoiseCraft does not collect any user data. We do not use analytics tools, advertising SDKs, or third-party tracking services.</p>
 
-  <h2>Third-Party Libraries</h2>
-  <p>This app uses only official Apple frameworks provided by iOS. No third-party libraries are used.</p>
+    <h2 class="text-xl font-semibold mt-10 mb-3">Third-Party Libraries</h2>
+    <p class="text-[#8b92a8] leading-relaxed">This app uses only official Apple frameworks provided by iOS. No third-party libraries are used.</p>
 
-  <h2>Accounts</h2>
-  <p>No registration, login, or accounts are required to use The NoiseCraft. Everything is stored locally on your device.</p>
+    <h2 class="text-xl font-semibold mt-10 mb-3">Accounts</h2>
+    <p class="text-[#8b92a8] leading-relaxed">No registration, login, or accounts are required to use The NoiseCraft. Everything is stored locally on your device.</p>
 
-  <h2>Your Rights</h2>
-  <p>You retain full control over your data. Since no data is collected, there's nothing for us to delete or export. If you have any questions, feel free to contact us.</p>
+    <h2 class="text-xl font-semibold mt-10 mb-3">Your Rights</h2>
+    <p class="text-[#8b92a8] leading-relaxed">You retain full control over your data. Since no data is collected, there's nothing for us to delete or export. If you have any questions, feel free to contact us.</p>
 
-  <h2>Contact</h2>
-  <p>For any concerns or questions, contact us at <a href="mailto:info@thenoisecraft.com">info@thenoisecraft.com</a>.</p>
+    <h2 class="text-xl font-semibold mt-10 mb-3">Contact</h2>
+    <p class="text-[#8b92a8] leading-relaxed">For any concerns or questions, contact us at <a href="mailto:info@thenoisecraft.com" class="text-accent hover:underline">info@thenoisecraft.com</a>.</p>
+  </main>
 
-  <p>&copy; 2026 The NoiseCraft by Aleksei Usanov</p>
+  <footer class="bg-surface border-t border-border py-8 px-4 text-center text-sm text-[#8b92a8]">
+    <div class="flex items-center justify-center gap-4 sm:gap-6 mb-4">
+      <a href="index.html" class="hover:text-white transition-colors">Home</a>
+      <a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a>
+      <a href="mailto:info@thenoisecraft.com" class="hover:text-white transition-colors">Support</a>
+    </div>
+    <p>&copy; 2026 The NoiseCraft by Aleksei Usanov</p>
+  </footer>
 </body>
 </html>

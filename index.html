@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The NoiseCraft</title>
+  <title>The NoiseCraft – Focus. Relax. Sleep.</title>
 
   <!-- SEO -->
   <meta name="description" content="The NoiseCraft is an offline noise generator to help you focus, relax or sleep — with no tracking and no accounts.">
@@ -27,13 +27,12 @@
   <meta name="twitter:description" content="Offline soundscapes for focus, relaxation or sleep – with no accounts or tracking." />
   <meta name="twitter:image" content="https://thenoisecraft.com/og-image.jpg" />
 
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="The Noise Craft" />
-<link rel="manifest" href="/site.webmanifest" />
-
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="The NoiseCraft" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -57,205 +56,189 @@
   }
   </script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fff;
-      color: #000;
-      text-align: center;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      right: 0;
-      text-align: right;
-      padding: 20px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #888;
-      font-size: 0.9rem;
-    }
-
-    main {
-      padding: 80px 20px 10px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      color: #777;
-      font-weight: normal;
-      font-size: 1.3rem;
-    }
-
-    .appstore-button {
-      margin-top: 40px;
-      margin-bottom: 0px;
-    }
-
-    .appstore-button img {
-      height: 50px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 16px;
-    }
-
-    @media (min-width: 768px) {
-      .features-grid {
-        grid-template-columns: 1fr 1fr;
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#0b0f1a',
+            surface: '#131927',
+            border: '#1e2740',
+            accent: '#7c6ef0',
+          }
+        }
       }
     }
+  </script>
 
-    .feature-card {
-      background: #f9f9f9;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
-      text-align: center;
-      padding: 12px;
+  <style>
+    html { scroll-behavior: smooth; }
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
-
-    .feature-card img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 12px;
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .feature-card p {
-      font-size: 16px;
-      color: #333;
-      padding: 0 12px;
-    }
-
-    .feature-card h3 {
-      font-size: 18px;
-      margin-top: 8px;
-      margin-bottom: 6px;
-      color: #111;
-    }
-
-    .site-footer {
-      margin-top: 60px;
-      padding: 24px 16px;
-      background-color: #f4f4f4;
-      border-top: 1px solid #ddd;
-      text-align: center;
-    }
-
-    .footer-content p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .footer-content a {
-      color: #666;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-
-    .footer-content a:hover {
-      color: #000;
-    }
-
-.branding {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.branding img {
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
-}
-
-.branding h1 {
-  font-size: 2.2rem;
-  margin: 0;
-}
-
   </style>
 </head>
-<body>
-  <nav>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="mailto:info@thenoisecraft.com">Support</a>
+<body class="bg-base text-[#e8eaf0] font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',sans-serif] antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-base/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5">
+        <img src="logo.png" alt="The NoiseCraft" class="w-8 h-8 rounded-lg" />
+        <span class="font-semibold text-sm hidden sm:inline">The NoiseCraft</span>
+      </a>
+      <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#8b92a8]">
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+        <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+        <a href="mailto:info@thenoisecraft.com" class="hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <div class="branding">
-  <img src="logo.png" alt="Logo" />
-  <h1>The NoiseCraft</h1>
-</div>
-    <h2>Offline soundscapes to focus, relax, or sleep.</h2>
-    <div class="appstore-button">
-      <a href="https://apps.apple.com/us/app/the-noise-craft/id6747891000">
-        <img src="AppStoreButton.svg" alt="Download on the App Store">
-      </a>
-    </div>
-  </main>
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center relative pt-14">
+    <!-- Glow -->
+    <div class="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-accent/15 rounded-full blur-[100px] pointer-events-none"></div>
 
-<h2 style="font-size: 1.8rem; margin-bottom: 20px; color: #222;">What’s New 1.0.5</h2>
+    <img src="logo.png" alt="The NoiseCraft" class="w-24 h-24 sm:w-28 sm:h-28 rounded-[22px] shadow-2xl relative z-10 mb-6" />
 
-<div style="max-width: 800px; margin: 0 auto; text-align: left;">
-  <ul style="list-style: none; padding-left: 0;">
-    <li style="margin-bottom: 16px;">
-      <strong>🌟 New App Icon:</strong> Clean. Calm. Instantly recognizable.
-    </li>
-    <li style="margin-bottom: 16px;">
-      <strong>🎨 Polished UI:</strong> Subtle refinements across the app for a smoother, more focused experience.
-    </li>
-    <li style="margin-bottom: 16px;">
-      <strong>⚙️ Better Performance:</strong> Faster loading, fewer bugs, more flow.
-    </li>
-  </ul>
-</div>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight relative z-10">
+      The NoiseCraft
+    </h1>
 
-  <section class="features-grid">
-    <div class="feature-card">
-      <img src="feature_ui.jpg" alt="NoiseCraft UI" />
-      <h3>Tap. Breathe. Focus.</h3>
-      <p>Start instantly with soothing soundwaves that block distractions.</p>
+    <p class="mt-4 text-lg sm:text-xl text-[#8b92a8] max-w-md">
+      Offline soundscapes to focus, relax, or sleep.
+    </p>
+
+    <!-- Rating -->
+    <div class="mt-6 flex items-center gap-2 text-sm text-[#8b92a8]">
+      <span class="text-accent text-base">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="font-medium text-white">4.9</span>
+      <span>&middot; 154 Reviews on the App Store</span>
     </div>
-    <div class="feature-card">
-      <img src="feature_control.jpg" alt="Controls View" />
-      <h3>Tailor Your Sound.</h3>
-      <p>Fine-tune rhythm, tempo, layers - even mood-defining colors.</p>
-    </div>
-    <div class="feature-card">
-      <img src="feature_pro.jpg" alt="Background Options" />
-      <h3>Unlock Nature & Beyond.</h3>
-      <p>Pro gives access to immersive scenes: rain, fire, space, forest and more.</p>
-    </div>
-    <div class="feature-card">
-      <img src="feature_vibe.jpg" alt="Accent Color Picker" />
-      <h3>Set the Vibe.</h3>
-      <p>Pick a color that matches your mood - calm, cozy, or creative.</p>
+
+    <!-- App Store Button -->
+    <a href="https://apps.apple.com/us/app/the-noise-craft/id6747891000"
+       class="mt-8 inline-block transition-transform duration-200 hover:scale-105 relative z-10">
+      <img src="AppStoreButton.svg" alt="Download on the App Store" class="h-[50px]" />
+    </a>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 text-[#8b92a8]/50 animate-bounce">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; 2026 The NoiseCraft by Aleksei Usanov</p>
-      <p><a href="mailto:info@thenoisecraft.com">Send Feedback</a></p>
+  <!-- Features -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12" data-animate>
+      Designed for deep focus
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden p-3 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10" data-animate>
+        <img src="feature_ui.jpg" alt="NoiseCraft UI" class="w-full rounded-xl" loading="lazy" />
+        <h3 class="text-lg font-semibold mt-4 px-2">Tap. Breathe. Focus.</h3>
+        <p class="text-[#8b92a8] text-sm mt-1 px-2 pb-2">Start instantly with soothing soundwaves that block distractions.</p>
+      </div>
+
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden p-3 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10" data-animate>
+        <img src="feature_control.jpg" alt="Controls View" class="w-full rounded-xl" loading="lazy" />
+        <h3 class="text-lg font-semibold mt-4 px-2">Tailor Your Sound.</h3>
+        <p class="text-[#8b92a8] text-sm mt-1 px-2 pb-2">Fine-tune rhythm, tempo, layers — even mood-defining colors.</p>
+      </div>
+
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden p-3 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10" data-animate>
+        <img src="feature_pro.jpg" alt="Background Options" class="w-full rounded-xl" loading="lazy" />
+        <h3 class="text-lg font-semibold mt-4 px-2">Unlock Nature & Beyond.</h3>
+        <p class="text-[#8b92a8] text-sm mt-1 px-2 pb-2">Pro gives access to immersive scenes: rain, fire, space, forest and more.</p>
+      </div>
+
+      <div class="bg-surface border border-border rounded-2xl overflow-hidden p-3 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10" data-animate>
+        <img src="feature_vibe.jpg" alt="Accent Color Picker" class="w-full rounded-xl" loading="lazy" />
+        <h3 class="text-lg font-semibold mt-4 px-2">Set the Vibe.</h3>
+        <p class="text-[#8b92a8] text-sm mt-1 px-2 pb-2">Pick a color that matches your mood — calm, cozy, or creative.</p>
+      </div>
     </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+      <div data-animate>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-accent/10">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-1">No Tracking</h3>
+        <p class="text-sm text-[#8b92a8]">Zero analytics. Zero data collection. Your privacy is absolute.</p>
+      </div>
+
+      <div data-animate>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-accent/10">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-1">No Accounts</h3>
+        <p class="text-sm text-[#8b92a8]">No sign-ups, no passwords. Open the app and start listening.</p>
+      </div>
+
+      <div data-animate>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-accent/10">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636a9 9 0 010 12.728M5.636 18.364a9 9 0 010-12.728M12 12h.01M8.464 8.464l7.072 7.072" />
+          </svg>
+        </div>
+        <h3 class="font-semibold mb-1">Works Offline</h3>
+        <p class="text-sm text-[#8b92a8]">Every sound is generated on-device. No internet required, ever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second CTA -->
+  <section class="text-center px-6 py-20 sm:py-28" data-animate>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6">Your calm starts here.</h2>
+    <a href="https://apps.apple.com/us/app/the-noise-craft/id6747891000"
+       class="inline-block transition-transform duration-200 hover:scale-105">
+      <img src="AppStoreButton.svg" alt="Download on the App Store" class="h-[50px]" />
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border py-8 px-4 text-center text-sm text-[#8b92a8]">
+    <div class="flex items-center justify-center gap-4 sm:gap-6 mb-4">
+      <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      <a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a>
+      <a href="mailto:info@thenoisecraft.com" class="hover:text-white transition-colors">Support</a>
+    </div>
+    <p>&copy; 2026 The NoiseCraft by Aleksei Usanov</p>
   </footer>
+
+  <!-- Scroll Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
